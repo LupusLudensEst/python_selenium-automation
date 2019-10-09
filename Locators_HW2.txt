@@ -6,5 +6,7 @@
 6. Checkbox next to ‘keep me signed it’ $x("//input[@type='checkbox']")
 7. Details link $x("//a[@id='remember_me_learn_more_link']")
 8. Create your amazon account button $x("//a[@id='createAccountSubmit']")
-9. *Conditions of use link $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&')]")
+9.1. *Conditions of use link $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&')]")
+9.2. *Conditions of use link $x("//a[text()='Conditions of Use']")
+9.3. *Conditions of use link $x("//a[contains(@href, 'condition_of_use')]")
 10. *Privacy Notice link $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&')]")
