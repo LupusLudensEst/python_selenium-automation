@@ -2,7 +2,7 @@
 Feature: Tests for Orders functionality
   # Enter feature description here
 
-  Scenario: Logged out user sees Sign in page when click
+  Scenario: Logged out user sees Sign in page when click on it
     Given Open Amazon page
     When Click Amazon Orders Link
     Then Verify Sign In page is opened
