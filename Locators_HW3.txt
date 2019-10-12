@@ -7,5 +7,7 @@
 6.1. $$("div.a-alert-content")
 7. Re-enter password field: $$("input[id='ap_password_check']")
 8. Text "Conditions of Use" below Re-enter password field: $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&')]")
+8.1. Text "Conditions of Use" below Re-enter password field: $$("a[href*='condition_of_use']")
 9. Text "Privacy Notice" below Re-enter password field: $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&')]")
+9.1. Text "Privacy Notice" below Re-enter password field: $$("a[href*='ap_register_notification_privacy_notice']")
 10. Text "Already have an account?" and button "Sign In": $x("//a[contains(@href, '/ap/signin?openid.pape.max_auth_age=0')]")
