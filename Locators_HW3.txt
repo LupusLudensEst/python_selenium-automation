@@ -11,3 +11,4 @@
 9. Text "Privacy Notice" below Re-enter password field: $x("//a[contains(@href, '/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&')]")
 9.1. Text "Privacy Notice" below Re-enter password field: $$("a[href*='ap_register_notification_privacy_notice']")
 10. Text "Already have an account?" and button "Sign In": $x("//a[contains(@href, '/ap/signin?openid.pape.max_auth_age=0')]")
+10.1. Text "Already have an account?" and button "Sign In": $$("a[href*='openid.pape.max_auth_age']")
