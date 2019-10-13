@@ -44,7 +44,7 @@ def click_on_sign_in_continue(context):
     sleep(4)
 
 @then('Enter "Brain Stimulator" into search field')
-def enter_password(context):
+def enter_search_word(context):
     search = context.driver.find_element(By.XPATH, "//input[@id='twotabsearchtextbox']")
     search.clear()
     search.send_keys('Brain Stimulator')
