@@ -61,7 +61,7 @@ def click_on_search_word(context):
     sleep(2)
 
 @then("Click on Add to Cart button")
-def click_on_add_to_carton(context):
+def click_on_add_to_cart(context):
     result = context.driver.find_element(By.XPATH, "//input[@name='submit.add-to-cart']").click()
     sleep(2)
 
