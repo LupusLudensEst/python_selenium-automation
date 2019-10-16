@@ -30,4 +30,6 @@ def click_on_amazon_music_menu_item(context):
 def verify_amount_of_items(context):
     sleep(4)
     print(len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS)))
+    assert len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS)) == 6, \
+        f'Expected 6 items  but got {len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS))}'
     #raise NotImplementedError(u'STEP: Then 6 menu items are present')
