@@ -2,6 +2,6 @@
 Feature: Test for amazonprime menu functionality
   # HW4.2
 
-  Scenario: Amazonprime has EXPECTED AMOUNT of BOXES or menu items
-    Given Open Amazonprime page
-    Then Verify there are EXPECTED AMOUNT of BOXES
+    Scenario: Amazonprime has EXPECTED AMOUNT of BOXES or menu items
+     Given Open Amazonprime page
+     Then Verify there are 8 boxes
