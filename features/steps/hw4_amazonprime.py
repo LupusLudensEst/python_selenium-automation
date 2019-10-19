@@ -4,7 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 use_step_matcher("re")
 
-AMAZONPRIME_BOXES_RESULTS = (By.XPATH, "//div[@class='a-section img-wrapper']")
+#AMAZONPRIME_BOXES_RESULTS = (By.XPATH, "//div[@class='a-section img-wrapper']")
+AMAZONPRIME_BOXES_RESULTS = (By.CSS_SELECTOR, "p.a-text-bold")
 EXPECTED_AMOUNT_BOXES = int(input("Enter expected amount of boxes: "))
 
 @given("Open Amazonprime page")
