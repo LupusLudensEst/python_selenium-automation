@@ -29,6 +29,8 @@ def open_amazon_prime(context):
 @then('Verify there are {expected_amount} boxes')
 def verify_boxes(context, expected_amount):
     sleep(3)
+    #print(len(context.driver.find_elements(*EIGHT_BOXES)))
+    print('There are: ', len(context.driver.find_elements(*EIGHT_BOXES)), 'items total.')
     actual_boxes = len(context.driver.find_elements(*EIGHT_BOXES))
     assert actual_boxes == int(expected_amount), \
         f'Expected {expected_amount} items but got {actual_boxes}'
