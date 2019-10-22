@@ -2,8 +2,8 @@ from behave import when, given, then
 from selenium.webdriver.common.by import By
 from time import sleep
 
-#ADD_TO_CART_BUTTON = (By.ID, 'add-to-cart-button')
-#CLOSING_X_SIDE_SECTION = (By.ID, 'attach-close-sideSheet-link')
+ADD_TO_CART_BUTTON = (By.ID, 'add-to-cart-button')
+CLOSING_X_SIDE_SECTION = (By.ID, 'attach-close-sideSheet-link')
 
 COLOR_OPTIONS = (By.CSS_SELECTOR, 'div#variation_color_name li')
 SELECTED_COLOR = (By.CSS_SELECTOR, 'div#variation_color_name span.selection')
