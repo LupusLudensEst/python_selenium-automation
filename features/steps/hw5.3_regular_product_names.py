@@ -19,6 +19,5 @@ def verify_product_has_word_and_name(context):
     print('The actual word is: ', context.driver.find_element(*SELECTED_WORD).text, '.')
 
     for x in range(len(word_webelements)):
-        word_webelements[x].text
         actual_word = context.driver.find_element(*SELECTED_WORD).text
         assert expected_word in actual_word, f'Expected, "{expected_word}", but got, "{actual_word}"'
