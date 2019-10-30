@@ -1,17 +1,16 @@
-from behave import *
-from time import sleep
+from behave import given, when, then
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-use_step_matcher("re")
+from selenium.webdriver.support.wait import WebDriverWait
+from time import sleep
 
 SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='action-inner']") #(By.XPATH, "//span[@class='nav-action-inner']")
 
 @then("Verify SignIn tooltip is present and clickable1")
 def verify_signin_toopltip_clickable(context):
     context.driver.wait.until(
-        EC.element_to_be_clickable(SIGN_IN_TOOLTIP)
+        EC.element_to_be_clickable(SIGN_IN_TOOLTIP) #Stumble is here. The issue with the time.
     )
 
 
