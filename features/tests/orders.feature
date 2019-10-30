@@ -11,3 +11,11 @@ Feature: Tests for Orders functionality
     Given Open Amazon page
     When Click on cart icon
     Then Verify 'Your Shopping Cart is empty.' text present
+
+#================================================TOOLTIP===========================================================
+
+#  Scenario: Sign In tooltip appears and disappears
+#    Given Open Amazon page
+#    Then Verify SignIn tooltip is present and clickable
+#    When Wait until SignIn tooltip disappears
+#    Then Verify SignIn tooltip is not clickable

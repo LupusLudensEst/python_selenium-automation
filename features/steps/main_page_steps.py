@@ -8,6 +8,7 @@ ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2") #type of data tu
 EMAIL_FIELD = (By.CSS_SELECTOR, "input[type='email']")
 CART = (By.ID, 'nav-cart')
 CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
+#SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']")
 
 @given('Open Amazon page')
 def open_amazon(context):
@@ -40,3 +41,24 @@ def verify_cart_empty(context):
 def verify_signin_opened(context):
     context.driver.find_element(*EMAIL_FIELD) #*-tells that there are two elements
     assert 'https://www.amazon.com/ap/signin' in context.driver.current_url
+
+#================================================TOOLTIP===========================================================
+# @then("Verify SignIn tooltip is present and clickable")
+# def verify_signin_toopltip_clickable(context):
+#     context.driver.wait.until(
+#         EC.element_to_be_clickable(SIGN_IN_TOOLTIP)
+#     )
+#
+# @when("Wait until SignIn tooltip disappears")
+# def wait_sign_in_tooltip_disappears(context):
+#     context.driver.wait.until(
+#         EC.invisibility_of_element_located(SIGN_IN_TOOLTIP)
+#     )
+#
+#
+# @then("Verify SignIn tooltip is not clickable")
+# def wait_sign_in_tooltip_not_clickable(context):
+#     # Wait until NOT!
+#     context.driver.wait.until_not(
+#         EC.element_to_be_clickable(SIGN_IN_TOOLTIP)
+#     )

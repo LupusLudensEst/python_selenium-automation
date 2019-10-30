@@ -16,7 +16,7 @@ def click_on_shopping_cart_1(context):
 
 @step("Click on the Sign in icon Enter")
 def click_on_sign_in_enter(context):
-    context.driver.find_element(By.XPATH, "//span[@class='action-inner']").click()
+    context.driver.find_element(By.CSS_SELECTOR, "span.action-inner").click() #(By.XPATH, "//span[@class='action-inner']").click()
     sleep(4)
 
 @step("Enter email into Email field")
