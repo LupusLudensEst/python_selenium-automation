@@ -1,6 +1,6 @@
 # Created by Gurov Viacheslav at 30.10.2019
 Feature: Today's deal
-  #hw6.2_hw6.2_today_deal
+  #hw6.1_hw6.2_today_deal
 
 
   Scenario: User can switch the windows and add product the cart
