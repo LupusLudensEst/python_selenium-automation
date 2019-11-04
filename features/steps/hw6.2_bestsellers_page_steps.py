@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
+#Locators declared as an variables
 BEST_SELLERS_PAGE = (By.XPATH, "//a[contains(@href, 'bestsellers')]") #(By.XPATH, "//a[@class='nav-a  ']")
 TOP_LINKS = (By.CSS_SELECTOR, '#zg_tabs a')
 HEADER = (By.CSS_SELECTOR, '#zg_banner_text_wrapper')
@@ -22,7 +23,7 @@ def click_thru_top(context):
         link_text = link_to_click.text
 
         link_to_click.click()
-        sleep(10)
+        sleep(1)
 
         new_text = context.driver.find_element(*HEADER).text
         assert link_text in new_text, f'Expected {link_text} to be in {new_text}'
