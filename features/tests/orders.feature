@@ -1,6 +1,6 @@
 # Created by Gurov Viacheslav at 07.10.2019
 Feature: Tests for Orders functionality
-  #hw6.1_following_lana
+  #hw6.1
 
   Scenario: Logged out user sees Sign in page when click on it
     Given Open Amazon page
