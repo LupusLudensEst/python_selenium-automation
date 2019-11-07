@@ -28,5 +28,7 @@ driver.wait.until(EC.element_to_be_clickable(BTN_SEARCH)).click()
 # verify
 assert 'Dress' in driver.find_element(By.XPATH, "//div[contains(@class,'commercial-unit-desktop-top')]").text
 assert 'Dress' in driver.find_element(By.XPATH, "//div[@class='g']").text
+print('1: ', driver.find_element(By.XPATH, "//div[contains(@class,'commercial-unit-desktop-top')]").text, ';')
+print('2: ', driver.find_element(By.XPATH, "//div[@class='g']").text, '!')
 
 driver.quit()
