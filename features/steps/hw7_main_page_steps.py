@@ -12,7 +12,8 @@ CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
 
 @given('Open Amazon page')
 def open_amazon(context):
-    context.driver.get('https://www.amazon.com/')
+    # context.driver.get('https://www.amazon.com/')
+    context.app.main_page.open_page()
 
 @given('Open Amazon Bestsellers')
 def open_amazon_bestsellers(context):

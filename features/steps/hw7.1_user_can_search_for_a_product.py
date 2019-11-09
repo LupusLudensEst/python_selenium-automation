@@ -17,6 +17,7 @@ def search_product(context, product):
 
 @then("Search results for {product} is shown")
 def verify_results(context, product):
-    result_text = context.driver.find_element(*TOOLBAR_TEXT_BOLD).text
-    assert result_text == product, f"Expected text is {product}, but got {result_text}"
-    print('Result text is: ', result_text, '.')
+    # result_text = context.driver.find_element(*TOOLBAR_TEXT_BOLD).text
+    # assert result_text == product, f"Expected text is {product}, but got {result_text}"
+    # print('Result text is: ', result_text, '.')
+    context.app.search_results_page.verify_results_shown(product)
