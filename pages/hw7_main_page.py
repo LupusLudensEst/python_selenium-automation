@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.hw7_base_page import Page
 
-
 class MainPage(Page):
     SEARCH_INPUT = (By.ID, 'twotabsearchtextbox')
     SEARCH_ICON = (By.CSS_SELECTOR, "input.nav-input[type='submit']")
