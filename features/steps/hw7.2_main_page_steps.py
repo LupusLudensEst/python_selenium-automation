@@ -8,7 +8,6 @@ ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2") #type of data tu
 EMAIL_FIELD = (By.CSS_SELECTOR, "input[type='email']")
 CART = (By.ID, 'nav-cart')
 CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
-EMAIL_FIELD = (By.CSS_SELECTOR, "input[type='email']")
 #SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']")
 
 @given('Open Amazon page')

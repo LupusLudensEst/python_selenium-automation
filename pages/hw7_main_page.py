@@ -8,3 +8,5 @@ class MainPage(Page):
     def search_for_keyword(self, text):
         self.input_text(text, *self.SEARCH_INPUT)
         self.click(*self.SEARCH_ICON)
+
+
