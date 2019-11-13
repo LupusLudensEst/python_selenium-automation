@@ -31,36 +31,6 @@ def click_thru_top(context):
         assert link_text in new_text, f'Expected {link_text} to be in {new_text}'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='action-inner']") #(By.XPATH, "//span[@class='nav-action-inner']")
 #
 # @then("Verify SignIn tooltip is present and clickable1")

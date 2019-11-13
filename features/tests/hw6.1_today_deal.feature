@@ -4,15 +4,27 @@ Feature: Today's deal
 
 
   Scenario: User can switch the windows and add product the cart
+    #1
     Given Amazon today deal page
+    #2
     When Store original windows
+    #3
     When Click on Open Deals
+    #4
     When Switch to the new openly window
+    #5
     When Today's Deals are shown
-    And Click on product name
-    And Add product to cart
-    And User can close new window and switch back to original
-    And Refresh page
-    And Click on cart
+    #6
+    When Click on product name
+    #7
+    When Add product to cart
+    #8
+    When User can close new window and switch back to original
+    #9
+    When Refresh page
+    #10
+    When Click on cart
+    #11
     When Cart has one item in it
+    #12
     When Verify there is one item
