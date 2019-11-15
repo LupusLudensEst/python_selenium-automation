@@ -15,9 +15,9 @@ Feature: Today's deal
     #5
     When Today's Deals are shown
     #6
-    When Click on product name
-    #7
     When Add product to cart
+    #7
+#    When Add product to cart
     #8
     When User can close new window and switch back to original
     #9

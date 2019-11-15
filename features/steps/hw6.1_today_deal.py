@@ -7,8 +7,8 @@ from time import sleep
 
 SEE_ALL_DEALS = (By.XPATH, "//a[contains(@aria-label, 'deals under $25')]") #(By.CSS_SELECTOR, "span.as-title-block-right")
 TODAY_DEALS = (By.XPATH, "//a[@href='/gp/goldbox?ref_=nav_cs_gb_azl']") #(By.CSS_SELECTOR, "div.gbh1-bold") #(By.CSS_SELECTOR, 'h1 div.gbh1-bold') #(By.CSS_SELECTOR, "div.gbh1-bold") #(By.CSS_SELECTOR, 'h1 div.gbh1-bold')
-PRODUCT = (By.ID, "101_dealView_4") #(By.XPATH, "//a[@id='101 4e309eb6-announce']")
-PRODUCT_REAL = (By.XPATH, "//img[contains(@src, 'https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg')]") #(By.XPATH, "//a[contains(@href, 'Foldable-Drying-Rack-White')]") #(By.XPATH, "//a[@title='AmazonBasics Foldable Clothes Drying Laundry Rack - White']") #(By.XPATH, "//img[@src='https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg']")
+PRODUCT = (By.XPATH, "//span[./button[contains(@aria-label, 'Add to Cart')]]") #(By.ID, "101_dealView_4") #(By.XPATH, "//a[@id='101 4e309eb6-announce']")
+#PRODUCT_REAL = (By.XPATH, "//img[contains(@src, 'https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg')]") #(By.XPATH, "//a[contains(@href, 'Foldable-Drying-Rack-White')]") #(By.XPATH, "//a[@title='AmazonBasics Foldable Clothes Drying Laundry Rack - White']") #(By.XPATH, "//img[@src='https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg']")
 ADD_TO_CART = (By.ID, "add-to-cart-button") #(By.XPATH, "//input[@name='submit.add-to-cart']") #(By.NAME, "submit.add-to-cart") #(By.XPATH, "//div[@class='a-button-stack']") #(By.XPATH, "//span[@id='submit.add-to-cart']") #(By.ID, "submit.add-to-cart") #(By.XPATH, "//input[@id='add-to-cart-button']") #(By.XPATH, "//input[@name='submit.add-to-cart']")
 ITEMS = (By.ID, "nav-cart-count")
 ONE_ITEM = (By.ID, "sc-subtotal-label-activecart")
@@ -31,7 +31,7 @@ def open_amazon_deal_page(context):
 #2
 @when('Store original windows')
 def store_original_window(context):
-    original_window = context.driver.current_window_handle
+    original_window = context.driver.current_window_handle # see string 84
     old_windows = context.driver.window_handles
     print('\n Original_window: \n ', original_window)
     print('\n Old_window: \n', old_windows)
@@ -61,27 +61,27 @@ def today_deals_shown(context, expected_header):
     assert actual_header == expected_header, f'Expected {expected_header}, but got: {actual_header}'
 
 #6
-@when('Click on product name')
+@when('Add product to cart')
 def click_on_product(context):
     context.driver.find_element(*PRODUCT).click()
     print(context.driver.find_element(*PRODUCT).text)
     sleep(4)
 
 #6.1 #The stumble is here. Can not find proper locator. Or click executing on another page.
-    context.driver.find_element(*PRODUCT_REAL).click()
-    sleep(4)
+    # context.driver.find_element(*PRODUCT_REAL).click()
+    # sleep(4)
 
 #7
 
-@when('Add product to cart')
-def add_to_cart(context):
-    context.driver.find_element(*ADD_TO_CART).click()
+# @when('Add product to cart')
+# def add_to_cart(context):
+#     context.driver.find_element(*ADD_TO_CART).click()
 
 #8
 @when('User can close new window and switch back to original')
 def close_window_back_to_original(context):
     context.driver.close()
-    context.driver.switch_to.window(context.original_window)
+    context.driver.switch_to.window(context.original_window) # see string 34
 
 #9
 @when('Refresh page')
