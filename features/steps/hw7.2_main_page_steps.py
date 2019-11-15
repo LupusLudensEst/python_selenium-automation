@@ -8,6 +8,8 @@ ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2") #type of data tu
 EMAIL_FIELD = (By.CSS_SELECTOR, "input[type='email']")
 CART = (By.ID, 'nav-cart')
 CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
+AMAZON_MUSIC_MENU_ITEM = (By.XPATH, "//ul[contains(@class, 'hmenu-visible')]//div[contains(text(), 'Amazon Music')]")
+AMAZON_MUSIC_MENU_ITEM_RESULTS = (By.CSS_SELECTOR, "ul.hmenu-visible a:not(.hmenu-back-button)")
 #SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']")
 
 @given('Open Amazon page')

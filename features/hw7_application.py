@@ -1,5 +1,6 @@
 from pages.hw7_main_page import MainPage
 from pages.hw7_search_results_page import SearchResultsPage
+from pages.hw8_side_menu import SideMenu
 
 class Application:
 
@@ -8,3 +9,4 @@ class Application:
 
         self.main_page = MainPage(self.driver)
         self.search_results_page = SearchResultsPage(self.driver)
+        self.side_menu =SideMenu(self.driver)
