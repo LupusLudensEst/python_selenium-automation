@@ -11,10 +11,10 @@ class SideMenu(Page):
         sleep(1)
 
     def verify_amount_of_items(self, expected_item_count: int):
+
         """
         :param expected_item_count: Expected amount of menu items
-        :return:
         """
         actual_item_count = len(self.driver.find_elements(*self.AMAZON_MUSIC_MENU_ITEM_RESULTS))
 
-        assert actual_item_count == expected_item_count, f'Expected {expected_item_count}, but got {actual_item_count}'
+        assert expected_item_count == actual_item_count, f'Expected {expected_item_count}, but got {actual_item_count}'

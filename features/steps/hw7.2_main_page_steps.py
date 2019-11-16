@@ -1,15 +1,22 @@
-from behave import when, given, then
+from behave import *
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from time import sleep
 
 ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2") #type of data tuple-can not be changed
 EMAIL_FIELD = (By.CSS_SELECTOR, "input[type='email']")
 CART = (By.ID, 'nav-cart')
 CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
-AMAZON_MUSIC_MENU_ITEM = (By.XPATH, "//ul[contains(@class, 'hmenu-visible')]//div[contains(text(), 'Amazon Music')]")
-AMAZON_MUSIC_MENU_ITEM_RESULTS = (By.CSS_SELECTOR, "ul.hmenu-visible a:not(.hmenu-back-button)")
+# AMAZON_MUSIC_MENU_ITEM = (By.XPATH, "//ul[contains(@class, 'hmenu-visible')]//div[contains(text(), 'Amazon Music')]")
+# AMAZON_MUSIC_MENU_ITEM_RESULTS = (By.CSS_SELECTOR, "ul.hmenu-visible a:not(.hmenu-back-button)")
+SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, '#nav-signin-tooltip span')
+ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2")
+SEARCH_INPUT = (By.ID, 'twotabsearchtextbox')
+SEARCH_ICON = (By.CSS_SELECTOR, "input.nav-input[type='submit']")
+CARD_ITEM_COUNT = (By.ID, 'nav-cart-count')
 #SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']")
 
 @given('Open Amazon page')
@@ -45,6 +52,26 @@ def verify_signin_opened(context):
     context.driver.find_element(*EMAIL_FIELD) #*-tells that there are two elements
     assert 'https://www.amazon.com/ap/signin' in context.driver.current_url
 
+@when("Click on hamburger menu")
+def click_on_hamburger_menu(context):
+   # context.driver.find_element(*HAM_MENU).click()
+    context.app.main_page.click_menu()
+    sleep(2)
+
+@then("Click on Amazon music menu item")
+def click_on_amazon_music_menu_item(context):
+    # sleep(2)
+    # context.driver.find_element(*AMAZON_MUSIC_MENU_ITEM).click()
+    context.app.side_menu.click_amazon_music()
+
+
+@then('{expected_item_count} menu items are present')
+def verify_amount_of_items(context, expected_item_count):
+    # sleep(4)
+    # actual_item_count = len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS)
+    # assert actual_item_count == int(expected_item_count) \
+    #     f'Expected 6 items  but got {len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS))}'
+    context.app.side_menu.verify_amount_of_items(expected_item_count)
 #================================================TOOLTIP===========================================================
 # @then("Verify SignIn tooltip is present and clickable")
 # def verify_signin_toopltip_clickable(context):
