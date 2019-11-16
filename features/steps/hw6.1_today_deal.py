@@ -10,9 +10,10 @@ TODAY_DEALS = (By.XPATH, "//a[@href='/gp/goldbox?ref_=nav_cs_gb_azl']") #(By.CSS
 PRODUCT = (By.XPATH, "//button[@id='103 7f45cd65-announce']")#(By.XPATH, "//span[./button[contains(@aria-label, 'Add to Cart')]]") #(By.ID, "101_dealView_4") #(By.XPATH, "//a[@id='101 4e309eb6-announce']")
 #PRODUCT_REAL = (By.XPATH, "//img[contains(@src, 'https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg')]") #(By.XPATH, "//a[contains(@href, 'Foldable-Drying-Rack-White')]") #(By.XPATH, "//a[@title='AmazonBasics Foldable Clothes Drying Laundry Rack - White']") #(By.XPATH, "//img[@src='https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg']")
 #ADD_TO_CART = (By.ID, "add-to-cart-button") #(By.XPATH, "//input[@name='submit.add-to-cart']") #(By.NAME, "submit.add-to-cart") #(By.XPATH, "//div[@class='a-button-stack']") #(By.XPATH, "//span[@id='submit.add-to-cart']") #(By.ID, "submit.add-to-cart") #(By.XPATH, "//input[@id='add-to-cart-button']") #(By.XPATH, "//input[@name='submit.add-to-cart']")
+CLICK_ON_CART = (By.ID, "nav-cart")
 ITEMS = (By.ID, "nav-cart-count")
 ONE_ITEM = (By.ID, "sc-subtotal-label-activecart")
-CLICK_ON_CART = (By.ID, "nav-cart")
+
 
 # DEALS_UNDER_25_LINK = (By.XPATH, "//a[contains(@aria-label, 'deals under $25')]")
 # TODAYS_DEALS_HEADER = (By.CSS_SELECTOR, "div.gbh1-bold")
