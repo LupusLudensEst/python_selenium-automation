@@ -1,4 +1,4 @@
-from behave import given, when
+from behave import given, when, then
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,9 +7,9 @@ from time import sleep
 
 SEE_ALL_DEALS = (By.XPATH, "//a[contains(@aria-label, 'deals under $25')]") #(By.CSS_SELECTOR, "span.as-title-block-right")
 TODAY_DEALS = (By.XPATH, "//a[@href='/gp/goldbox?ref_=nav_cs_gb_azl']") #(By.CSS_SELECTOR, "div.gbh1-bold") #(By.CSS_SELECTOR, 'h1 div.gbh1-bold') #(By.CSS_SELECTOR, "div.gbh1-bold") #(By.CSS_SELECTOR, 'h1 div.gbh1-bold')
-PRODUCT = (By.XPATH, "//span[./button[contains(@aria-label, 'Add to Cart')]]") #(By.ID, "101_dealView_4") #(By.XPATH, "//a[@id='101 4e309eb6-announce']")
+PRODUCT = (By.XPATH, "//button[@id='103 7f45cd65-announce']")#(By.XPATH, "//span[./button[contains(@aria-label, 'Add to Cart')]]") #(By.ID, "101_dealView_4") #(By.XPATH, "//a[@id='101 4e309eb6-announce']")
 #PRODUCT_REAL = (By.XPATH, "//img[contains(@src, 'https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg')]") #(By.XPATH, "//a[contains(@href, 'Foldable-Drying-Rack-White')]") #(By.XPATH, "//a[@title='AmazonBasics Foldable Clothes Drying Laundry Rack - White']") #(By.XPATH, "//img[@src='https://images-na.ssl-images-amazon.com/images/I/718WQGSmINL._AC_SR300,300_.jpg']")
-ADD_TO_CART = (By.ID, "add-to-cart-button") #(By.XPATH, "//input[@name='submit.add-to-cart']") #(By.NAME, "submit.add-to-cart") #(By.XPATH, "//div[@class='a-button-stack']") #(By.XPATH, "//span[@id='submit.add-to-cart']") #(By.ID, "submit.add-to-cart") #(By.XPATH, "//input[@id='add-to-cart-button']") #(By.XPATH, "//input[@name='submit.add-to-cart']")
+#ADD_TO_CART = (By.ID, "add-to-cart-button") #(By.XPATH, "//input[@name='submit.add-to-cart']") #(By.NAME, "submit.add-to-cart") #(By.XPATH, "//div[@class='a-button-stack']") #(By.XPATH, "//span[@id='submit.add-to-cart']") #(By.ID, "submit.add-to-cart") #(By.XPATH, "//input[@id='add-to-cart-button']") #(By.XPATH, "//input[@name='submit.add-to-cart']")
 ITEMS = (By.ID, "nav-cart-count")
 ONE_ITEM = (By.ID, "sc-subtotal-label-activecart")
 CLICK_ON_CART = (By.ID, "nav-cart")
@@ -31,7 +31,7 @@ def open_amazon_deal_page(context):
 #2
 @when('Store original windows')
 def store_original_window(context):
-    original_window = context.driver.current_window_handle # see string 84
+    original_window = context.driver.current_window_handle # see string 84 and 52
     old_windows = context.driver.window_handles
     print('\n Original_window: \n ', original_window)
     print('\n Old_window: \n', old_windows)
@@ -48,6 +48,8 @@ def switch_to_new_window(context):
 
     current_windows = context.driver.window_handles
     print('\n New_windows: \n', current_windows)
+
+    context.original_window = context.driver.current_window_handle
 
     new_window = current_windows[1]
     context.driver.switch_to_window(new_window)
@@ -81,12 +83,12 @@ def click_on_product(context):
 @when('User can close new window and switch back to original')
 def close_window_back_to_original(context):
     context.driver.close()
-    context.driver.switch_to.window(context.original_window) # see string 34
+    context.driver.switch_to.window(context.original_window) # see string 34 and 52
 
 #9
 @when('Refresh page')
 def refreshing(context):
-    driver.refresh()
+    context.driver.refresh()
 
 #10
 @when('Click on cart')
@@ -103,4 +105,6 @@ def cart_has_item(context):
 def cart_has_one_item(context):
     one = 'Subtotal (1 item)'
     item = context.driver.find_element(*ONE_ITEM).text
+    
+
 
