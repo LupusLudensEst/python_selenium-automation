@@ -70,38 +70,28 @@ def click_on_product(context):
     print(context.driver.find_element(*PRODUCT).text)
     sleep(4)
 
-#6.1 #The stumble is here. Can not find proper locator. Or click executing on another page.
-    # context.driver.find_element(*PRODUCT_REAL).click()
-    # sleep(4)
-
 #7
-
-# @when('Add product to cart')
-# def add_to_cart(context):
-#     context.driver.find_element(*ADD_TO_CART).click()
-
-#8
 @when('User can close new window and switch back to original')
 def close_window_back_to_original(context):
     context.driver.close()
     context.driver.switch_to.window(context.original_window) # see string 34 and 52
 
-#9
+#8
 @when('Refresh page')
 def refreshing(context):
     context.driver.refresh()
 
-#10
+#9
 @when('Click on cart')
 def click_on_cart(context):
     context.driver.find_element(*CLICK_ON_CART)
 
-#11
+#10
 @when('Cart has one item in it')
 def cart_has_item(context):
     context.driver.find_element(*ITEMS).click()
 
-#12
+#11
 @when('Verify there is one item')
 def cart_has_one_item(context):
     one = 'Subtotal (1 item)'

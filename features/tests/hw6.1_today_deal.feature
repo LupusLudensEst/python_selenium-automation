@@ -17,14 +17,12 @@ Feature: Today's deal
     #6
     When Add product to cart
     #7
-    #When Add product to cart
-    #8
     When User can close new window and switch back to original
-    #9
+    #8
     When Refresh page
-    #10
+    #9
     When Click on cart
-    #11
+    #10
     When Cart has one item in it
-    #12
+    #11
     When Verify there is one item
