@@ -37,6 +37,7 @@ class Page:
         e.send_keys(text)
 
     def open_page(self, url=''):
+        #logger.info(f'Opening page {self.base_url + url}')
         self.driver.get(self.base_url + url)
 
     def verify_text(self, expected_text, *locator):

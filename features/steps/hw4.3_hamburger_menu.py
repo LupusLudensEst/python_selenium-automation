@@ -1,7 +1,7 @@
-from behave import *
-from time import sleep
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+# from behave import *
+# from time import sleep
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
 
 
 # ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2")
