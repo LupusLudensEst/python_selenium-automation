@@ -11,9 +11,10 @@ from time import sleep
 #---Regular
 SELECTED_WORD = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li")
 
-@given("Open Amazon {productid} page")
-def open_amazon_wholefoods_page(context, productid):
-    context.driver.get(f'https://www.amazon.com/{productid}/')
+#see hw7.2_main_page_steps.py str#77
+# @given("Open Amazon {productid} page")
+# def open_amazon_wholefoods_page(context, productid):
+#     context.driver.get(f'https://www.amazon.com/{productid}/')
 
 @then('Verify every product on the page has a text Regular and a product name')
 def verify_product_has_word(context):

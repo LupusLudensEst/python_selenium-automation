@@ -72,6 +72,20 @@ def verify_amount_of_items(context, expected_item_count):
     # assert actual_item_count == int(expected_item_count) \
     #     f'Expected 6 items  but got {len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS))}'
     context.app.side_menu.verify_amount_of_items(expected_item_count)
+
+
+#see hw5.3_regular_product_names.py str#14
+@given('Open Amazon product {product_id} page')
+def open_product(context, product_id):
+    context.app.product_page.open_product(product_id)
+
+@when('Hover over Add To Cart button')
+def hover_add_to_cart(context):
+    context.app.product_page.hover_add_to_cart()
+
+@then('Veryfy size selection tooltip is shown')
+def verify_size_tooltip(context):
+    context.app.product_page.verify_size_tooltip()
 #================================================TOOLTIP===========================================================
 # @then("Verify SignIn tooltip is present and clickable")
 # def verify_signin_toopltip_clickable(context):
