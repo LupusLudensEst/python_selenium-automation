@@ -13,11 +13,11 @@ CART_EMPTY = (By.CSS_SELECTOR, "h1.sc-empty-cart-header")
 # AMAZON_MUSIC_MENU_ITEM = (By.XPATH, "//ul[contains(@class, 'hmenu-visible')]//div[contains(text(), 'Amazon Music')]")
 # AMAZON_MUSIC_MENU_ITEM_RESULTS = (By.CSS_SELECTOR, "ul.hmenu-visible a:not(.hmenu-back-button)")
 SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, '#nav-signin-tooltip span')
-ORDERS_LINK = (By.CSS_SELECTOR, "a#nav-orders span.nav-line-2")
 SEARCH_INPUT = (By.ID, 'twotabsearchtextbox')
 SEARCH_ICON = (By.CSS_SELECTOR, "input.nav-input[type='submit']")
 CARD_ITEM_COUNT = (By.ID, 'nav-cart-count')
-#SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']")
+#SIGN_IN_TOOLTIP = (By.CSS_SELECTOR, "span.action-inner") #(By.XPATH, "//span[@class='nav-action-inner']") #(By.CSS_SELECTOR, '#nav-signin-tooltip span')
+#HAM_MENU = (By.ID, 'nav-hamburger-menu')
 
 @given('Open Amazon page')
 def open_amazon(context):
