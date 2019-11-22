@@ -3,7 +3,7 @@ Feature: Test for product page
   #8.*
 
   Scenario: Size tooltip is shown upon hovering over Add To Cart button
-    Given Open Amazon product B074TBCSC8 page
+    Given Open Amazon B074TBCSC8 page
     When Hover over Add To Cart button
     Then Veryfy size selection tooltip is shown
 

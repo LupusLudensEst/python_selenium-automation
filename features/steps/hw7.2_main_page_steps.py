@@ -76,7 +76,7 @@ def verify_amount_of_items(context, expected_item_count):
 
 
 #see hw5.3_regular_product_names.py str#14
-@given('Open Amazon product {product_id} page')
+@given('Open Amazon {product_id} page')
 def open_product(context, product_id):
     context.app.product_page.open_product(product_id)
 

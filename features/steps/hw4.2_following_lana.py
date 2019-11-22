@@ -4,11 +4,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 use_step_matcher("re")
 
-@given('Open page Amazon')
-def open_amazon_page(context):
-    context.driver.get('https://www.amazon.com/')
-    sleep(4)
-
 @when("Search for a Brain Stimulator")
 def enter_search_word(context):
     search = context.driver.find_element(By.XPATH, "//input[@id='twotabsearchtextbox']")
@@ -33,8 +28,7 @@ def click_on_add_to_cart(context):
     sleep(2)
 
 
-@then("Verify cart has 1 item")
+@then("Verify cart has 0 item")
 def verify_if_product_in_cart(context):
     result = context.driver.find_element(By.XPATH, "//span[@id='nav-cart-count']").text
-    assert "1" in result, f"Expected text is:  {result}."
-
+    assert "0" in result, f"Expected text is:  {result}."
