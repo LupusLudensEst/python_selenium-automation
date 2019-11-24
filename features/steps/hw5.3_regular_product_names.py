@@ -10,6 +10,7 @@ from time import sleep
 # PRODUCT_NAME = (By.XPATH, "//span[@class='a-size-medium wfm-sales-item-card__product-name a-text-bold']")
 #---Regular
 SELECTED_WORD = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li")
+#PRODUCTS = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li[.//div[contains(@class, 'brand-name')]]")
 
 #see hw7.2_main_page_steps.py str#79
 @given("Open Amazon's {product_id} page")

@@ -4,7 +4,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
-PRODUCTS = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li") #12 or 15 goods below the agreed line, all products as search field
+PRODUCTS = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li[.//div[contains(@class, 'brand-name')]]")
+#PRODUCTS = (By.XPATH, "//*[@id='wfm-pmd_deals_section']/div[6]//li") #12 or 15 goods below the agreed line, all products as search field
 PRODUCT_DESCRIPTION = (By.CSS_SELECTOR, 'span.wfm-sales-item-card__product-name') #All strings on the page consisting description of the goods
 
 @given("Open Amazon {product_id} page as Lana did")
