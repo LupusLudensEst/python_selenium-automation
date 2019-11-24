@@ -16,8 +16,8 @@ def verify_regular_price(context, expected_word):
     product_elements = context.driver.find_elements(*PRODUCTS)
 
     for product_element in product_elements:
-        assert expected_word in product_element.text, f"Expected, '{expected_word}', to be in: {product_element.text}"
-        print('Product element: ',  product_element.text, '===')
+        assert expected_word in product_element.text, f"Expected, {expected_word}, to be in: {product_element.text}"
+        print('Product element: ',  product_element.text, ';')
 
         product_description = product_element.find_element(*PRODUCT_DESCRIPTION).text
         print('\n', product_description, ';')
