@@ -22,12 +22,14 @@ def verify_product_has_word(context):
 #---name
 # def verify_product_has_name(context):
 #     expected_product_element = context.driver.find_elements(*PRODUCT_NAME)
+
 #---Regular
     word_webelements = context.driver.find_elements(*SELECTED_WORD)
     print('The actual word is: ', (context.driver.find_element(*SELECTED_WORD).text), '.')
 # ---name
 #     product_name_webelements = context.driver.find_elements(*PRODUCT_NAME).element
 #     print('The actual product element is: ', (context.driver.find_element(*PRODUCT_NAME).element), '.')
+
 #---Regular
     for x in range(len(word_webelements)):
         actual_word = context.driver.find_element(*SELECTED_WORD).text

@@ -3,7 +3,7 @@ Feature: Test case using BDD that opens amazon.com, clicks on the cart icon add 
   # HW3.4a
 
   Scenario: Opens amazon.com, clicks on the cart icon add product and verifies that product is in the Your Shopping Cart
-    Given Open main page Amazon
+    Given Open Amazon page
     When Click on the Cart icon First
     And Click on the Sign in icon Enter
     Then Enter email into Email field

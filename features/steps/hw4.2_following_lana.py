@@ -2,7 +2,6 @@ from behave import *
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-use_step_matcher("re")
 
 @when("Search for a Brain Stimulator")
 def enter_search_word(context):
@@ -28,7 +27,7 @@ def click_on_add_to_cart(context):
     sleep(2)
 
 
-@then("Verify cart has 0 item")
-def verify_if_product_in_cart(context):
+@then("Verify cart has {expected_amount} item")
+def verify_if_product_in_cart(context, expected_amount):
     result = context.driver.find_element(By.XPATH, "//span[@id='nav-cart-count']").text
-    assert "0" in result, f"Expected text is:  {result}."
+    assert expected_amount in result, f"Expected text is:  {result}."

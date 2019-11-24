@@ -1,6 +1,6 @@
 # Created by Gurov Viacheslav at 13.10.2019
 Feature: Test for Amazon search functionality
-  # HW3.4b
+  # HW4.2
 
   Scenario: User can search for a product
   Given Open Amazon page

@@ -2,12 +2,6 @@ from behave import *
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-use_step_matcher("re")
-
-@given('Open main page Amazon')
-def open_amazon_page(context):
-    context.driver.get('https://www.amazon.com/')
-    sleep(4)
 
 @when("Click on the Cart icon First")
 def click_on_shopping_cart_1(context):
@@ -41,7 +35,7 @@ def enter_password(context):
 @step("Click on the Sign in icon Continue")
 def click_on_sign_in_continue(context):
     context.driver.find_element(By.XPATH, "//input[@id='signInSubmit']").click()
-    sleep(55)
+    sleep(4)
 
 @then('Enter "Brain Stimulator" into search field')
 def enter_search_word(context):

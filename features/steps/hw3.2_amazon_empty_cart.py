@@ -2,13 +2,7 @@ from behave import *
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-use_step_matcher("re")
 
-
-@given('Open Amazon main page')
-def open_amazon_page(context):
-    context.driver.get('https://www.amazon.com/')
-sleep(4)
 
 @when('Click on the shopping cart icon')
 def click_on_shopping_cart(context):

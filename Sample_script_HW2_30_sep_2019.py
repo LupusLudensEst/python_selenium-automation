@@ -32,13 +32,13 @@ sleep(1)
 
 #Click on "Go" button
 driver.find_element(By.XPATH, "//input[@class='a-button-input']").click()
-"""
-driver.find_element(By.XPATH, "//input[@type='submit']").click()
-#driver.find_element(By.XPATH, "//span[@class='a-button-inner']/input[@type='submit']").click()
-#driver.find_element(By.XPATH, "//input[@class='a-button-input']").click()
-#driver.find_element(By.XPATH, "//span[@id='helpSearchSubmit-announce']").click()
-#driver.find_element(By.XPATH, "//span[@class='a-button-text']").click()
-"""
+
+# driver.find_element(By.XPATH, "//input[@type='submit']").click()
+# driver.find_element(By.XPATH, "//span[@class='a-button-inner']/input[@type='submit']").click()
+# driver.find_element(By.XPATH, "//input[@class='a-button-input']").click()
+# driver.find_element(By.XPATH, "//span[@id='helpSearchSubmit-announce']").click()
+# driver.find_element(By.XPATH, "//span[@class='a-button-text']").click()
+
 sleep(3)
 
 # Verify if "Cancel order" is on page
