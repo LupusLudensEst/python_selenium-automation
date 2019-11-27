@@ -12,7 +12,7 @@ Feature: Test case using BDD that opens amazon.com, clicks on the cart icon add 
     And Click on the Sign in icon Continue
     Then Enter "Brain Stimulator" into search field
     And Click on search button
-    And Click on first good int he list
+    And Click on first good in the list
     Then Click on Add to Cart button
     Then Click on No Thanks button
     Then  Click on the Cart icon Second

@@ -49,7 +49,7 @@ def click_on_search_button(context):
     context.driver.find_element(By.CSS_SELECTOR, "input[value='Go']").click()
     sleep(3)
 
-@step("Click on first good int he list")
+@step("Click on first good in the list")
 def click_on_search_word(context):
     result = context.driver.find_element(By.XPATH, "//span[@class='a-size-base-plus a-color-base a-text-normal']").click()
     sleep(2)
