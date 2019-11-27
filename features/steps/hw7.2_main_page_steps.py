@@ -68,6 +68,7 @@ def click_on_amazon_music_menu_item(context):
 
 @then('{expected_item_count} menu items are present')
 def verify_amount_of_items(context, expected_item_count):
+    # expected_item_count = int(expected_item_count)
     # sleep(4)
     # actual_item_count = len(context.driver.find_elements(*AMAZON_MUSIC_MENU_ITEM_RESULTS)
     # assert actual_item_count == int(expected_item_count) \
