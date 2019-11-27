@@ -4,4 +4,4 @@ Feature: Test for amazonprime menu functionality
 
     Scenario: Amazonprime has EXPECTED AMOUNT of BOXES or menu items
      Given Open Amazonprime page
-     Then Verify there are 0 boxes
+     Then Verify there are 8 boxes
