@@ -13,7 +13,6 @@ driver = webdriver.Chrome()
 driver.get('https://lingocard.com/')
 driver.maximize_window()
 
-
 # Verify if "International Educational Platform" is on page
 assert 'International Educational Platform' in driver.find_element(By.XPATH, "//h1[@class='header-title flex-container content-center text-center lang']").text
 print('The text: ', driver.find_element(By.XPATH, "//h1[@class='header-title flex-container content-center text-center lang']").text, '.')
