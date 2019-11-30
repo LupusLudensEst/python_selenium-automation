@@ -1,4 +1,4 @@
-import allure
+#import allure
 from behave import *
 from selenium.webdriver.common.by import By
 from selenium import webdriver
