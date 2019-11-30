@@ -8,3 +8,4 @@ Feature: Test for hamburger menu functionality
     When Click on hamburger menu
     Then Click on Amazon music menu item
     Then 6 menu items are present
+
