@@ -11,6 +11,6 @@ driver.get('https://www.discountmugs.com/')
 sleep(2)
 
 assert 'Empowering you to share your message and create a lasting impression since 1995' in driver.find_element(By.XPATH, "//div[@class='home-line-text']").text
-print(driver.find_element(By.XPATH, "//div[@class='home-line-text']").text)
+print('Text:', driver.find_element(By.XPATH, "//div[@class='home-line-text']").text, '.')
 
 driver.quit()
