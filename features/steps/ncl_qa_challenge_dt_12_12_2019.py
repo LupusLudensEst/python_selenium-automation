@@ -8,7 +8,6 @@ GET_PORTS_BTN = (By.XPATH, "//a[contains(@href, '/shore-excursions')]")
 NAV_EXCURSIONS = (By.CSS_SELECTOR, "button.btn-cta.btn-primary.btn-large.search-submit")
 SHORE_EXC_IS_PRESENT = (By.CSS_SELECTOR, "h2.header-title.visible-desktops")
 PRICE_RANGE_IS = (By.CSS_SELECTOR, "span.ui-slider-handle.ui-corner-all.ui-state-default") # (By.XPATH, "//span[@style='left: 1.5%;']")
-#NO_MORE_THIRTY_IS_HERE
 
 @given("a Guest")
 
@@ -46,7 +45,7 @@ def price_range_is(context):
 
 @then("Only shore excursions within range are displayed")
 def no_more_thirty_is_here(context):
-    context.driver.find_element(*NO_MORE_THIRTY_IS_HERE).text
-    assert '$30' in NO_MORE_THIRTY_IS_HERE
-    print('Text:', NO_MORE_THIRTY_IS_HERE, '.')
+    assert '30' in context.driver.current_url('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').text
+    print('Text:', context.driver.current_url('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').text, '.')
+    # context.driver.find_element_by_tag_name('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').get_attribute("30")
     sleep(2)
