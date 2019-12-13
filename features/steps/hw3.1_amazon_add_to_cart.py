@@ -69,6 +69,14 @@ def click_on_add_to_cart(context):
 def click_on_no_coverage_btn(context):
     result = context.driver.find_element(By.CSS_SELECTOR, "button#siNoCoverage-announce.a-button-text").click()
 
+# def click_card_icon(context):
+#     try:
+#         context.driver.find_element(By.CSS_SELECTOR, "span.a-size-medium.a-color-base.a-text-normal").click()
+#         #sleep(4)
+#     except WebDriverException:
+#         context.driver.find_element(By.XPATH, "//input[@name='submit.add-to-cart']").click()
+#         #sleep (4)
+
 @then("Click on the Cart icon Second")
 def click_on_shopping_cart_2(context):
     context.driver.find_element(By.XPATH, "//span[@id='nav-cart-count']").click()
