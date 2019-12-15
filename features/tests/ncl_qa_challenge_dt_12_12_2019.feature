@@ -1,6 +1,5 @@
 # Created by Vic at 12/12/2019
-Feature: #Guest explores Ports of Departure
-  # Guest explores Ports of Departure
+Feature: Guest explores Ports of Departure
 
   Scenario: Guest explores Ports of Departure
     Given a Guest

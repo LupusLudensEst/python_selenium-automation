@@ -2,12 +2,12 @@ from behave import *
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
 use_step_matcher("re")
 
-GET_PORTS_BTN = (By.XPATH, "//a[contains(@href, '/shore-excursions')]")
+GET_SH_EXC_BTN = (By.XPATH, "//a[contains(@href, '/shore-excursions')]")
 NAV_EXCURSIONS = (By.CSS_SELECTOR, "button.btn-cta.btn-primary.btn-large.search-submit")
-SHORE_EXC_IS_PRESENT = (By.CSS_SELECTOR, "h2.header-title.visible-desktops")
-PRICE_RANGE_IS = (By.CSS_SELECTOR, "span.ui-slider-handle.ui-corner-all.ui-state-default") # (By.XPATH, "//span[@style='left: 1.5%;']")
+SH_EXC_IS_PRESENT = (By.CSS_SELECTOR, "h2.header-title.visible-desktops")
 
 @given("a Guest")
 
@@ -15,12 +15,12 @@ PRICE_RANGE_IS = (By.CSS_SELECTOR, "span.ui-slider-handle.ui-corner-all.ui-state
 @step("I am on Homepage")
 def open_ncl_main_page(context):
     context.driver.get('https://www.ncl.com/')
-    sleep(4)
+    sleep(2)
 
 
 @step('I navigated to "Shore Excursion" page')
 def get_ports_btn(context):
-    context.driver.find_element(*GET_PORTS_BTN).click()
+    context.driver.find_element(*GET_SH_EXC_BTN).click()
     sleep(2)
 
 
@@ -32,20 +32,17 @@ def nav_excursions(context):
 
 @step("Shore Excursions page is present")
 def shore_exc_is_present(context):
-    TEXT_IS_HERE = context.driver.find_element(*SHORE_EXC_IS_PRESENT).text
+    TEXT_IS_HERE = context.driver.find_element(*SH_EXC_IS_PRESENT).text
     assert 'Shore Excursions' in TEXT_IS_HERE
-    print('Text:', TEXT_IS_HERE, '.')
+    print(f'Text: {TEXT_IS_HERE} .')
     sleep(2)
 
 
 @when('Price range is filtered to "\$0-\$30"')
 def price_range_is(context):
-    context.driver.find_element(*PRICE_RANGE_IS).click()
+    context.driver.get('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30')
 
 
 @then("Only shore excursions within range are displayed")
 def no_more_thirty_is_here(context):
-    assert '30' in context.driver.current_url('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').text
-    print('Text:', context.driver.current_url('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').text, '.')
-    # context.driver.find_element_by_tag_name('https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30').get_attribute("30")
-    sleep(2)
+    assert 'priceRange=0+30' in context.driver.current_url == 'https://www.ncl.com/shore-excursions/search?sort=searchWeight&perPage=12&priceRange=0+30'
