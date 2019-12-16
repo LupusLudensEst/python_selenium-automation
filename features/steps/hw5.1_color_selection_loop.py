@@ -35,7 +35,7 @@ def verify_colors(context):
         actual_color = context.driver.find_element(*SELECTED_COLOR).text
 
         print('The actual color is: ', actual_color, '.')
-        assert actual_color == expected_colors[x], f'Expected {expected_colors[x]}, but got [expected_color]'
+        assert actual_color == expected_colors[x], f'Expected {expected_colors[x]}, but got {actual_color} '
     """
     for color in color_webelements:
         color.click()
