@@ -1,9 +1,9 @@
 from behave import *
 from selenium.webdriver.common.by import By
 
-SEARCH_INPUT = (By.ID, 'twotabsearchtextbox')
-SEARCH_ICON = (By.CSS_SELECTOR, "input.nav-input[type='submit']")
-TOOLBAR_TEXT_BOLD = (By.CSS_SELECTOR, "h1 span.a-text-bold")
+# SEARCH_INPUT = (By.ID, 'twotabsearchtextbox')
+# SEARCH_ICON = (By.CSS_SELECTOR, "input.nav-input[type='submit']")
+# TOOLBAR_TEXT_BOLD = (By.CSS_SELECTOR, "h1 span.a-text-bold")
 
 
 @when("Search for {product}")
