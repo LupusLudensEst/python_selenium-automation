@@ -57,7 +57,8 @@ def click_on_search_button(context):
 
 @step("Click on MUSE: The Brain Sensing Headband text")
 def click_on_search_word(context):
-    result = context.driver.find_element(By.CSS_SELECTOR, "span.a-size-medium.a-color-base.a-text-normal").click()
+    #result = context.driver.find_element(By.CSS_SELECTOR, "span.a-size-medium.a-color-base.a-text-normal").click()
+    result = context.driver.find_element(By.XPATH, "//a[@class='a-link-normal a-text-normal']").click()
     sleep(2)
 
 @then("Click on Add to Cart button")
@@ -86,5 +87,8 @@ def click_on_shopping_cart_2(context):
 @then(
     "Verify that text tDCS Device - TheBrainDriver v2\. tDCS Digital Precision \+ Safety Features\. \(Everything Included\. Ready-to-Use\)\. is on the page")
 def verify_if_product_in_cart(context):
-    result = context.driver.find_element(By.CSS_SELECTOR, "span.a-size-medium.sc-product-title.a-text-bold").text
+    #result = context.driver.find_element(By.CSS_SELECTOR, "span.a-size-medium.sc-product-title.a-text-bold").text
+    result = context.driver.find_element(By.XPATH, "//span[@class='a-size-medium sc-product-title']").text
     assert "tDCS Device - TheBrainDriver v2. tDCS Digital Precision + Safety Features. (Everything Included. Ready-to-Use)." in result, f"Expected text is:  {result}."
+
+
