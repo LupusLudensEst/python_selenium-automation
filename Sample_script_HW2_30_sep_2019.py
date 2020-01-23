@@ -23,6 +23,6 @@ sleep(3)
 
 # Verify if "Cancel order" is on page
 assert 'Cancel Items or Orders' in driver.find_element(By.XPATH, "//div[@class='help-content']/h1").text
-
+print('1: ', driver.find_element(By.XPATH, "//div[@class='help-content']/h1").text, ';')
 driver.quit()
 
