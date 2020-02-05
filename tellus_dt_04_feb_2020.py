@@ -23,13 +23,13 @@ driver.find_element( *LOGN_BTN ).click()
 # enter wrong login
 e = driver.find_element( *LGN_FLD )
 e.clear()
-e.send_keys('WrongPassword!@gmail.com')
+e.send_keys('WrongLogin1234!@gmail.com')
 sleep(4)
 
 # enter wrong password
 e = driver.find_element( *PSWRD_FLD )
 e.clear()
-e.send_keys('WrongPassword!@12')
+e.send_keys('WrongPassword1234!')
 sleep(4)
 
 # click on login button after login and password are entered
