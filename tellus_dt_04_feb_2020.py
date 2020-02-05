@@ -40,7 +40,5 @@ actual_text = driver.find_element( *ALRT_TEXT ).text
 assert 'Invalid user name or password.' in actual_text
 print(f'Text is here: {actual_text} ')
 
-
-
-# # driver quit
-# driver.quit()
+# driver quit
+driver.quit()
