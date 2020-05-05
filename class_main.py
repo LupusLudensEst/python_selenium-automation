@@ -4,7 +4,7 @@ class Dog():
     """ Simple dog model"""
 
     def __init__(self, name, age, color):
-        """Attributes initialization, name and age"""
+        """Attributes initialization, name, age and color"""
         self.name = name
         self.age = age
         self.color = color
