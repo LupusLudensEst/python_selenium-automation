@@ -12,7 +12,7 @@ class Page:
         self.actions = ActionChains(self.driver)
 
     def click(self, *locator):
-        """
+        """click_orders_link
         Clicks on WebElement
         :param locator: search strategy for find_element of a Web Element, ex. (By.ID, 'id')
         """

@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
-from features.hw7_application import Application
+from app.application import Application
 
 def browser_init(context):
     """

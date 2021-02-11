@@ -7,5 +7,5 @@ Feature: Test for hamburger menu functionality
     #Done in hw4.3_hamburger_menu.py & hw7.2_main_page_steps.py
     When Click on hamburger menu
     Then Click on Amazon music menu item
-    Then 6 menu items are present
+    Then 9 menu items are present
 

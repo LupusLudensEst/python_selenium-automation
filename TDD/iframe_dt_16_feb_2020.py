@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.implicitly_wait(20)
 
-# locators
+# Locators
 ALERT_ACCEPT = (By.XPATH, "//button[@class='sc-pNWxx sc-jrsJCI dryRrI emsrNO']")
 
 driver.get("https://yandex.ru")
