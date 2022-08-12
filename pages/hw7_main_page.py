@@ -10,7 +10,5 @@ class MainPage(Page):
         self.input_text(text, *self.SEARCH_INPUT)
         self.click(*self.SEARCH_ICON)
 
-    def click_menu(self):
-        self.click(*self.HAM_MENU)
 
 
