@@ -61,7 +61,7 @@ http://192.168.56.1:53498/index.html
 4. Renew requirements.txt: pip install --upgrade -r requirements.txt
 
 ##########
-Renew git to tje latest version
+Renew git to the latest version
 git update-git-for-windows
 
 ##########
