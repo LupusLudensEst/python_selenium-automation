@@ -1,14 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-# driver = webdriver.Chrome(executable_path = "C:\Webdrivers\chromedriver.exe")
 driver = webdriver.Chrome()
-driver.get("https://testautomationpractice.blogspot.com/")
 driver.maximize_window()
+
+driver.get("https://testautomationpractice.blogspot.com/")
+
 driver.implicitly_wait(5)
 
 # Locators
-CLCK_ME_BTN = (By.XPATH, "//button[@onclick='myFunction()']")
+CLCK_ME_BTN = (By.XPATH, "//button[@onclick='myFunctionAlert()']")
 
 driver.find_element(*CLCK_ME_BTN).click()
 
@@ -16,4 +17,4 @@ driver.find_element(*CLCK_ME_BTN).click()
 driver.switch_to.alert.dismiss() # closes alert window using cancel button
 
 # Driver quit
-driver.quit()
+# driver.quit()
