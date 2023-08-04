@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 BTN_SEARCH = (By.NAME, 'btnK')
 
 # init driver
-driver = webdriver.Chrome(executable_path="C:\Webdrivers\chromedriver")
+driver = webdriver.Chrome()
 driver.maximize_window()
 
 driver.implicitly_wait(4)
